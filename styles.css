@@ -1,0 +1,412 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+       FONTS
+*/
+
+@font-face {
+    font-family: 'nexa';
+    src: url('fonts/nexa_light-webfont.woff2') format('woff2'),
+    url('fonts/nexa_light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'nexa';
+    src: url('fonts/nexa_bold-webfont.woff2') format('woff2'),
+    url('fonts/nexa_bold-webfont.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Ampersand';
+    src: local('Helvetica'),
+    local('Palatino');
+    unicode-range: U+26;
+}
+
+/*
+       VARIABLES
+*/
+
+:root {
+    --main-color: #444444;
+    --font-size: 1em;
+    --h1-size: 1.375em;
+    --padding: 0.625em;
+    --padding-desktop: 2.5em;
+    --font-family: 'nexa', sans-serif;
+    --am-font-family: 'Ampersand', 'nexa', sans-serif;
+}
+
+/*
+       GENERAL
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: 'nexa', sans-serif;
+    font-size: var(--font-size);
+    color: var(--main-color);
+}
+
+h1 {
+    font-family: var(--am-font-family);
+    padding: var(--padding);
+    font-size: var(--h1-size);
+    font-weight: bold;
+}
+
+p {
+    padding: var(--padding);
+}
+
+a {
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+header {
+    z-index: 99999;
+    position: fixed;
+    width: 100%;
+    padding: 1.25em var(--padding-desktop);
+    background-color: #FFF;
+}
+
+header nav {
+    position: relative;
+    height: 1.500em;
+}
+
+header ul {
+    display: flex;
+    justify-content: flex-end;
+}
+
+header ul li {
+    font-size: 1.2em;
+    padding: 0.1em 0.5em;
+}
+
+header ul li:first-of-type {
+    margin-right: auto;
+}
+
+header h1 {
+    display: none;
+}
+
+header input, header span {
+    display: none;
+}
+
+@media screen and (max-width: 30em) {
+    header {
+        padding: var(--padding) 0;
+    }
+
+    header input {
+        opacity: 0;
+    }
+
+    header label, header input {
+        position: absolute;
+        right: var(--padding);
+    }
+
+    header label {
+        z-index: 999999;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    header ul {
+        display:  block;
+        opacity: 0;
+        z-index: 50;
+        position: absolute;
+        right: -100vw;
+        width: 100%;
+        background-color: #FFF;
+        height: 100vh;
+        padding-top: 3.125em;
+        transition: right 300ms ease-in-out, opacity 0s 300ms;
+    }
+
+    header ul li {
+        padding: 0.1em 0;
+        text-align: center;
+    }
+
+    header input:checked ~ ul {
+        right: 0;
+        opacity: 1;
+        transition: right 300ms ease-in-out, opacity 0s 0s;
+    }
+
+    header label span {
+        position: relative;
+    }
+
+    header label span, header label span:before, header label span:after {
+        display: inline-block;
+        margin: auto;
+        height: 0.125em;
+        width: 1.250em;
+        background-color: var(--main-color);
+    }
+
+    header label span:before, header label span:after {
+        position: absolute;
+        content: ""
+    }
+
+    header label span:before {
+        bottom: 0.313em;
+    }
+
+    header label span:after {
+        top: 0.313em;
+    }
+
+}
+
+main {
+    display: grid;
+    grid-template-columns: var(--padding-desktop) auto var(--padding-desktop) ;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-top: 4em;
+}
+
+main > h1 {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding: var(--padding) 0;
+}
+
+main > div {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 3%;
+    height: 100%;
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+
+main > div article {
+    position: relative;
+    border-radius: 5px;
+    height: 20em;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+}
+
+main > div article p, main > div article h1 {
+    color: #FFF;
+}
+
+main > div article img {
+    background: #f0f0f0;
+    display: block;
+    max-height: 100%;
+    min-width: 100%;
+}
+
+main > div article h1 {
+    z-index: 20;
+    position: absolute;
+    bottom: 2em;
+}
+
+main > div article p {
+    position: absolute;
+    bottom: 0;
+    color: #FFF;
+}
+
+main > div article footer {
+    padding: var(--padding);
+}
+
+main > div article a {
+    color: #FFF;
+}
+
+
+@media screen and (max-width: 30em) {
+    main {
+        grid-template-columns: 1em auto 1em;
+    }
+
+    main > div {
+        display: flex;
+        padding: 0.2em 0;
+        overflow-x: scroll;
+    }
+
+    main > div article:first-of-type {
+        margin-left: 10vw;
+    }
+
+    main > div article:last-of-type {
+        margin-right: 10vw;
+    }
+
+    main > div article {
+        height: 80vh;
+        min-width: 80vw;
+        margin-right: 2vw;
+    }
+
+
+    main > div article img {
+        height: 100%;
+    }
+}
+
+/*
+       INLOGGEN
+*/
+
+main > form {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+main > form label, main > form input, button {
+    display: block;
+}
+
+
+/*
+       RECEPT
+*/
+
+main > article {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+main > article h1, main > article p {
+    padding: var(--padding) 0;
+}
+
+main > article figure img {
+    width: 100%;
+}
+
+dialog {
+    pointer-events: none;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0.6rem;
+    box-shadow: 0 0 0 100em rgba(0,0,0,.8);
+}
+
+input:checked + dialog {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+footer label {
+    cursor: pointer;
+}
+
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+figure + input {
+    opacity: 0;
+    position: absolute;
+    left: -200em;
+}
+dialog input {
+    opacity: 0;
+    position: absolute;
+}
+
+dialog fieldset div {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+dialog label:hover ~ label svg path,
+dialog input:checked ~ label svg path,
+dialog label:hover svg path
+	{
+     fill: #4A90E2;
+    cursor: pointer;
+}
