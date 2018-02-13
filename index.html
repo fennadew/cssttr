@@ -1,61 +1,119 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Living Styleguide</title>
+    <title lang="en">Living Styleguide</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 <header>
     <nav>
-        <h1>Main navigation</h1>
+        <h1>Hoofd navigatie</h1>
         <label for="mobile-menu"><span></span></label>
         <input type="checkbox" id="mobile-menu">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="">Ontdekken</a></li>
-            <li><a href="">Favorieten</a></li>
-            <li><a href="profile.html">Profiel</a></li>
+            <li><a href="index.html" lang="en" accesskey="h">Home</a></li>
+            <li><a href="" accesskey="o">Ontdekken</a></li>
+            <li><a href="" accesskey="f">Favorieten</a></li>
+            <li><a href="profile.html" accesskey="p">Profiel</a></li>
         </ul>
     </nav>
 </header>
 <main>
     <h1>Nieuwste recepten</h1>
     <div>
-        <article>
-            <a href="receipe.html">
+        <a href="receipe.html">
+            <article>
+                <h1>Klassieke hamburger met bacon</h1>
+                <img src="images/pexels-photo-70497.jpeg" alt="Een foto van een heerlijke hamburger"/>
+                <p>Met cheddar kaas, tomaat en 100% ground beef</p>
+            </article>
+        </a>
+        <a href="#">
+            <article>
                 <h1>Klassieke hamburger met bacon</h1>
                 <img src="images/pexels-photo-70497.jpeg" alt="A drawing of a colorful monster on a newspaper"/>
                 <p>Met cheddar kaas, tomaat en 100% ground beef</p>
-            </a>
-        </article>
-        <article>
-            <a href="#">
+            </article>
+        </a>
+        <a href="#">
+            <article>
                 <h1>Klassieke hamburger met bacon</h1>
                 <img src="images/pexels-photo-70497.jpeg" alt="A drawing of a colorful monster on a newspaper"/>
                 <p>Met cheddar kaas, tomaat en 100% ground beef</p>
-
-            </a>
-        </article>
-        <article>
-            <a href="#">
+            </article>
+        </a>
+        <a href="#">
+            <article>
                 <h1>Klassieke hamburger met bacon</h1>
                 <img src="images/pexels-photo-70497.jpeg" alt="A drawing of a colorful monster on a newspaper"/>
                 <p>Met cheddar kaas, tomaat en 100% ground beef</p>
-            </a>
-        </article>
-        <article>
-            <a href="#">
-                <h1>Klassieke hamburger met bacon</h1>
-                <img src="images/pexels-photo-70497.jpeg" alt="A drawing of a colorful monster on a newspaper"/>
-                <p>Met cheddar kaas, tomaat en 100% ground beef</p>
-
-            </a>
-        </article>
+            </article>
+        </a>
     </div>
 </main>
+<footer>
+    <input type="checkbox" id="chat">
+    <label for="chat">Chat</label>
+    <div>
+        <ol>
+            <li>
+
+                <p>
+                    Hey!
+                </p>
+
+                <footer>
+                    <p>Posted on
+                        <time datatime="2015-01-22T10:25">10:25 AM</time>
+                        by you
+                    </p>
+                    <p data-status="READ">Has been read</p>
+                </footer>
+
+            </li>
+            <li>
+
+                <p>
+                    Hey! Sorry I was busy
+                </p>
+
+                <footer>
+                    <p>Posted on
+                        <time datatime="2017-02-03T14:19">2:19 PM</time>
+                        by John
+                    </p>
+                </footer>
+
+            </li>
+            <li>
+
+                <p>
+                    I sent that 2 years ago
+                </p>
+
+                <footer>
+                    <p>Posted on
+                        <time datatime="2017-02-03T14:22">2:22 PM</time>
+                        by you
+                    </p>
+                    <p data-status="DELIVERED">Has been delivered</p>
+                </footer>
+
+            </li>
+        </ol>
+
+        <form action="/" method="post">
+
+            <label for="field-message">Message</label>
+            <textarea name="field-message" id="field-message"></textarea>
+            <button type="submit">Send</button>
+
+        </form>
+    </div>
+</footer>
 
 </body>
 </html>
