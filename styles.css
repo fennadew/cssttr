@@ -630,10 +630,6 @@ main + footer ol {
     overflow-y: scroll;
 }
 
-input:checked + label + div {
-
-}
-
 
 @media screen and (max-width: 30em) {
     main {
@@ -724,10 +720,24 @@ dialog::backdrop {
     background-color: rgba(0, 0, 0, 0.4);
 }
 
-figure + input {
-    visibility: hidden;
+figure + input, figcaption input {
+    opacity: 0;
     position: absolute;
 }
+
+@keyframes spin {
+    0%   {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(359deg);
+    }
+}
+
+input:focus + label svg {
+    animation: spin 2s;
+}
+
 dialog input {
     opacity: 0;
     position: absolute;
