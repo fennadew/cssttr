@@ -585,10 +585,9 @@ main > div article p, main > div article h1 {
 main > div img {
     background: #f0f0f0;
     display: block;
-    max-height: 101%;
-    margin-top: -1%;
+    max-height: 100%;
     min-width: 100%;
-    transition: all ease 300ms;
+    transition: opacity ease 300ms;
     opacity: 0.9;
 }
 
