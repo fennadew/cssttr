@@ -313,6 +313,8 @@ textarea {
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html, body {
@@ -345,11 +347,39 @@ ul {
 
 p {
     padding: var(--padding);
+    margin: 1em 0;
 }
 
 a {
     text-decoration: none;
     color: var(--main-color);
+}
+
+a:focus {
+    outline: none;
+    color: var(--action-color);
+}
+
+input[type="text"], input[type="email"],  input[type="password"] {
+    padding: 0 0.75em;
+    height: 2.625em;
+}
+
+button, input[type="submit"], input[type="reset"] {
+    background-color: #FFF;
+    color: var(--action-color);
+    height: 2.625em;
+    cursor: pointer;
+    font-weight: bold;
+    outline: inherit;
+    border-radius: 2em;
+    border: 2px solid var(--action-color);
+    transition: all 300ms ease;
+}
+
+button:focus, input[type="submit"]:focus, input[type="reset"]:focus {
+    background-color: var(--action-color);
+    color: #FFF;
 }
 
 fieldset {
@@ -381,11 +411,12 @@ header li a {
     position: relative;
     display: inline-block;
     color: #797878;
-    font-size: 1.2em;
-    padding: 0.2em 0;
+    padding: 0.1em 0;
     margin: 0 1em;
+    line-height: 2;
     transition: ease-out 0.3s 0.1s;
 }
+
 header li a:after {
     content: "";
     height: 0.15em;
@@ -406,9 +437,17 @@ header li a:hover:after, header li a:focus:after {
     transform: scaleX(1);
 }
 
-
 header li:first-of-type {
     margin-right: auto;
+}
+
+header li:last-of-type a {
+    background: url("images/user.svg") no-repeat center;
+    text-indent: -100%;
+    overflow: hidden;
+    height: 2em;
+    width: 2em;
+    background-size: 1.3em;
 }
 
 header h1 {
@@ -495,14 +534,21 @@ main {
     grid-template-columns: var(--padding-desktop) auto var(--padding-desktop) ;
     grid-column-start: 2;
     grid-column-end: 3;
-    padding-top: 7em;
     min-height: 100vh;
+    padding-top: 4.6em;
+    margin-bottom: 5em;
 }
 
 main > h1 {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    padding: var(--padding) 0;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    padding: 2em 0;
+    text-align: center;
+    background: #4A90E2;
+    margin: 0 0 2em;
+    color: white;
+    height: 5em;
+    font-size: 1.6em;
 }
 
 main > div {
@@ -539,9 +585,11 @@ main > div article p, main > div article h1 {
 main > div img {
     background: #f0f0f0;
     display: block;
-    max-height: 100%;
+    max-height: 101%;
+    margin-top: -1%;
     min-width: 100%;
     transition: all ease 300ms;
+    opacity: 0.9;
 }
 
 
@@ -568,6 +616,10 @@ main > div article footer {
 main > div article a {
     color: #FFF;
 }
+
+/*
+      CHAT
+*/
 
 main + footer {
     z-index: 20;
@@ -624,10 +676,37 @@ main + footer footer {
     margin: 0 0 1em;
 }
 
+main + footer div {
+    padding: 2em 1.25em;
+}
+
 main + footer ol {
-    height: 15em;
-    padding: 0 1.25em;
+    height: 13em;
     overflow-y: scroll;
+}
+
+main + footer form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main + footer form label, main + footer form button {
+    display: block;
+    width: 100%;
+}
+
+main + footer form button {
+    padding: 0 1em;
+}
+
+main + footer textarea {
+    height: 2.5em;
+    width: 100%;
+    border: 1px solid var(--main-color);
+    padding: 0.6em 0.5em;
+    margin: 0.2em 0 1em;
+    background-color: #FFF;
+    resize: none;
 }
 
 
@@ -669,16 +748,73 @@ main + footer ol {
 main > form {
     grid-column-start: 2;
     grid-column-end: 3;
+    width: 25em;
+    padding: 5em 2em;
+    margin: auto;
+    background-color: #FFF;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
 }
 
-main > form label, main > form input, button {
+main > form input:invalid {
+    border: 1px solid red;
+}
+
+main > form input:valid {
+    border: 1px solid var(--action-color);
+}
+
+main > form label, main > form input[type="email"], main > form input[type="password"], main > form  button, main > form a {
+    width: 100%;
     display: block;
 }
 
+main > form input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
 
-/*
-       RECEPT
-*/
+main > form input[type="checkbox"] + label {
+    position: relative;
+    width: auto;
+    display: inline-block;
+    padding-left: 1.5em;
+}
+
+main > form input[type="checkbox"] + label:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 1em;
+    width: 1em;
+    background-color: #FFF;
+    border: 1px solid var(--main-color);
+}
+
+main > form input[type="checkbox"]:focus + label {
+    color: var(--action-color)
+}
+
+main > form input[type="checkbox"]:focus + label:before {
+    border: 1px solid var(--action-color);
+}
+
+main > form input[type="checkbox"]:checked + label:before {
+    background-color: var(--action-color);
+    border: 1px solid var(--action-color);
+}
+
+input[type="email"], main > form input[type="password"] {
+    margin: 0.2em 0 1em;
+}
+
+main > form a {
+    padding: 1em 0;
+}
+
+    /*
+           RECEPT
+    */
 
 main > article {
     grid-column-start: 2;

@@ -8,9 +8,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<header>
+    <nav>
+        <h1>Hoofd navigatie</h1>
+        <label for="mobile-menu"><span></span></label>
+        <input type="checkbox" id="mobile-menu">
+        <ul>
+            <li><a href="index.html" lang="en" accesskey="h">Home</a></li>
+            <li><a href="" accesskey="o">Ontdekken</a></li>
+            <li><a href="" accesskey="f">Favorieten</a></li>
+            <li><a href="profile.html" accesskey="p">Profiel</a></li>
+        </ul>
+    </nav>
+</header>
 <main>
     <h1>Inloggen</h1>
-    <form action="/" method="post">
+    <form action="index.html" method="get">
 
         <label for="field-email">Email</label>
         <input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
@@ -21,7 +34,7 @@
         <input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
         <label for="field-stay-logged-in">Stay logged in</label>
 
-        <a href="/">Forgot password</a>
+        <a href="#">Forgot password</a>
 
         <button type="submit">Login</button>
 
