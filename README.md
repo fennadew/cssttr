@@ -1,5 +1,5 @@
 # Voltooid
-##Week 1
+## Week 1
 - Concept bedenken + Design maken
 - Rating, navigation, picture with subtitle en media item components gebruikt
 - CSS grid toegepast
@@ -13,6 +13,8 @@
 - Inlog maken
 
 
+# Github page
+https://fennadew.github.io/cssttr
 
 # Bronnen
 Rating example makes use of Emoji from: http://emojione.com
