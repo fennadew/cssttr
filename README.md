@@ -1,6 +1,6 @@
 # Voltooid
 ## Week 1
-⋅* Concept bedenken + Design maken
+⋅⋅* Concept bedenken + Design maken
 ⋅* Rating, navigation, picture with subtitle en media item components gebruikt
 ⋅* CSS grid toegepast
 ⋅* Overzichtsscherm recepten
