@@ -12,6 +12,18 @@
 - Meer content toevoegen
 - Inlog maken
 
+# Voltooid
+## Week 2
+- Focus styles toegevoegd
+- Form validation toegevoegd + login gestyld
+- chat functie gemaakt
+
+# Planning voor volgende week
+- Step indictor toevoegen
+- Responsive maken
+- Accessibilty verbeteren
+- Meer pleasurable maken
+
 
 # Github page
 https://fennadew.github.io/cssttr
