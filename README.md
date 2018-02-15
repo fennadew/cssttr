@@ -19,7 +19,7 @@
 * Focus styles toegevoegd
 * Design iets aangepast
 * Form validation toegevoegd + login gestijld
-* github page aangemaakt
+* github page aangemaakt 
 * chat functie gemaakt
 * Extending the clickable area toegevoegd (rating, helaas werkt tabben met rating nog niet helemaal lekker)
 * custom checkbox gemaakt (login)
