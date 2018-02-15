@@ -11,18 +11,27 @@
 - Design verder uitwerken
 - Meer content toevoegen
 - Inlog maken
+- chat functie toevoegen
+
 
 # Voltooid
 ## Week 2
 - Focus styles toegevoegd
-- Form validation toegevoegd + login gestyld
+- Design iets aangepast
+- Form validation toegevoegd + login gestijld
+- github page aangemaakt
 - chat functie gemaakt
+- Extending the clickable area toegevoegd
+- custom checkbox gemaakt
+- Transitions op :hovers en :focus gemaakt
 
 # Planning voor volgende week
 - Step indictor toevoegen
 - Responsive maken
 - Accessibilty verbeteren
 - Meer pleasurable maken
+- rating focus verbeteren en dat het werkend is op tab
+- chat laten openen en sluiten
 
 
 # Github page
