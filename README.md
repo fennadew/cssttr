@@ -38,5 +38,5 @@
 [Link naar mijn GitHub Page](https://fennadew.github.io/cssttr)
 
 # Bronnen
-Rating example makes use of Emoji from: http://emojione.com
-Website makes use of icons from: http://flaticon.com
+Rating example makes use of Emoji from: [Emojione](http://emojione.com)
+Website makes use of icons from: [Flaticon](http://flaticon.com)
