@@ -39,4 +39,5 @@
 
 # Bronnen
 Rating example makes use of Emoji from: [Emojione](http://emojione.com)
+
 Website makes use of icons from: [Flaticon](http://flaticon.com)
