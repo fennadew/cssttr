@@ -652,7 +652,29 @@ main + footer input:focus + label {
     background:  var(--action-color) url("images/chat-white.svg") no-repeat center;
 }
 
+main + footer input:checked + label + div {
+    transform: translateY(0);
+}
+
+main + footer div > label {
+    background: url("images/close.svg") no-repeat center;
+    background-size: 1em;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    overflow: hidden;
+    width: 1em;
+    height: 1em;
+    text-indent: -100%;
+}
+
+main + footer input:focus + label + div > label {
+    background: url("images/close-focus.svg") no-repeat center;
+    background-size: 1em;
+}
+
 main + footer div {
+    transform: translateY(120%);
     position: absolute;
     width: 18em;
     right: 3em;
@@ -660,6 +682,7 @@ main + footer div {
     border-radius: 5px 5px 0 0;
     background-color: #FFF;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+    transition: 300ms ease;
 }
 
 main + footer p {
