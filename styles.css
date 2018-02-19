@@ -337,7 +337,7 @@ h1 {
     font-weight: bold;
 }
 
-li {
+ul li {
     list-style: none;
 }
 
@@ -402,7 +402,7 @@ header nav {
     position: relative;
 }
 
-header ul {
+header nav > ul {
     display: flex;
     justify-content: flex-end;
 }
@@ -441,13 +441,34 @@ header li:first-of-type {
     margin-right: auto;
 }
 
-header li:last-of-type a {
+header nav > ul > li:last-of-type > a {
     background: url("images/user.svg") no-repeat center;
     text-indent: -100%;
     overflow: hidden;
     height: 2em;
     width: 2em;
     background-size: 1.3em;
+}
+
+header nav > ul> li:last-of-type > a:focus {
+    background: url("images/user-focus.svg") no-repeat center;
+    background-size: 1.3em;
+}
+
+header ul ul {
+    opacity: 0;
+    height: 0;
+    text-align: center;
+    right: -1.5em;
+    overflow: hidden;
+    position: absolute;
+    transition: all ease 300ms;
+}
+
+header ul a:focus + ul, header ul ul:focus-within {
+    opacity: 1;
+    height: 5em;
+    background: #FFF;
 }
 
 header h1 {
@@ -531,9 +552,7 @@ header input, header span {
 
 main {
     display: grid;
-    grid-template-columns: var(--padding-desktop) auto var(--padding-desktop) ;
-    grid-column-start: 2;
-    grid-column-end: 3;
+    grid-template-columns: var(--padding-desktop) auto 25em auto var(--padding-desktop) ;
     min-height: 100vh;
     padding-top: 4.6em;
     margin-bottom: 5em;
@@ -541,7 +560,7 @@ main {
 
 main > h1 {
     grid-column-start: 1;
-    grid-column-end: 4;
+    grid-column-end: 6;
     padding: 2em 0;
     text-align: center;
     background: #4A90E2;
@@ -553,8 +572,8 @@ main > h1 {
 
 main > div {
     display: grid;
-    grid-template-columns: 30% 30% 30%;
-    grid-gap: 3%;
+    grid-template-columns: 32% 32% 32%;
+    grid-gap: 2%;
     height: 100%;
     grid-column-start: 2;
     grid-column-end: 4;
@@ -731,6 +750,12 @@ main + footer textarea {
     resize: none;
 }
 
+@media screen and (max-width: 60em) {
+    main > div {
+        grid-template-columns: 48% 48%;
+        grid-gap: 4%;
+    }
+}
 
 @media screen and (max-width: 30em) {
     main {
@@ -739,7 +764,11 @@ main + footer textarea {
 
     main > div {
         display: flex;
+        grid-template-columns: 100%;
+        grid-gap: 0;
         padding: 0.2em 0;
+        grid-column-start: 2;
+        grid-column-end: 3;
         overflow-x: scroll;
     }
 
@@ -769,11 +798,8 @@ main + footer textarea {
 
 main > form {
     position: relative;
-    grid-column-start: 2;
-    grid-column-end: 3;
-    width: 25em;
+    grid-column-start: 3;
     padding: 5em 2em;
-    margin: auto;
     background-color: #FFF;
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
@@ -869,7 +895,7 @@ main > form span:before {
 
 main > article {
     grid-column-start: 2;
-    grid-column-end: 3;
+    grid-column-end: 4;
 }
 
 main > article h1, main > article p {
@@ -890,6 +916,7 @@ dialog {
     bottom: 0;
     left: 0;
     right: 0;
+    margin: auto;
     border-radius: 0.6rem;
     box-shadow: 0 0 0 100em rgba(0,0,0,.8);
 }
@@ -940,14 +967,23 @@ dialog input {
 
 dialog fieldset div {
     display: flex;
-    flex-direction: row-reverse;
 }
 
-dialog label:hover ~ label svg path,
-dialog input:focus ~ label svg path,
-dialog input:checked ~ label svg path,
+dialog input + label svg path {
+    fill: #4A90E2;
+}
+
+dialog label:hover + label svg path,
+dialog input:focus + label svg path,
+dialog input:checked + label svg path,
 dialog label:hover svg path
 	{
      fill: #4A90E2;
     cursor: pointer;
+}
+
+
+dialog input:checked + label + input  + label svg path, dialog input:checked + label + input  +  label + input + label svg path,
+dialog input:checked + label + input  + label + input  +  label + input + label svg path {
+    fill: grey;
 }

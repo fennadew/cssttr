@@ -17,7 +17,12 @@
             <li><a href="index.html" lang="en" accesskey="h">Home</a></li>
             <li><a href="" accesskey="o">Ontdekken</a></li>
             <li><a href="" accesskey="f">Favorieten</a></li>
-            <li><a href="profile.html" accesskey="p">Profiel</a></li>
+            <li><a href="profile.html" accesskey="p">Profiel</a>
+                <ul>
+                    <li><a href="/profile.html">Inloggen</a></li>
+                    <li><a href="/registeren.html">Registeren</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
@@ -28,16 +33,16 @@
         <label for="field-email">Email</label>
         <input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
 
-        <label for="field-password">Password</label>
+        <label for="field-password">Wachtwoord</label>
         <input type="password" id="field-password" name="field-password" required>
-        <span>Password must be 8 characters</span>
+        <span>Wachtwoord moet 8 tekens bevatten</span>
 
         <input type="checkbox" id="field-stay-logged-in" name="field-stay-logged-in" value="stay-logged-in">
-        <label for="field-stay-logged-in">Stay logged in</label>
+        <label for="field-stay-logged-in">Ingelogd blijven</label>
 
-        <a href="#">Forgot password</a>
+        <a href="#">Wachtwoord vergeten</a>
 
-        <button type="submit">Login</button>
+        <button type="submit">Inloggen</button>
 
     </form>
 
