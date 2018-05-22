@@ -300,9 +300,9 @@ textarea {
     --main-color: #444444;
     --action-color: #4A90E2;
     --font-size: 1em;
-    --h1-size: 1.375em;
-    --padding: 0.625em;
-    --padding-desktop: 2.5em;
+    --h1-size: 1.375rem;
+    --padding: 0.625rem;
+    --padding-desktop: 2.5rem;
     --font-family: 'nexa', sans-serif;
     --am-font-family: 'Ampersand', 'nexa', sans-serif;
 }
@@ -347,7 +347,7 @@ ul {
 
 p {
     padding: var(--padding);
-    margin: 1em 0;
+    margin: 1rem 0;
 }
 
 a {
@@ -586,11 +586,14 @@ main > div a {
     height: 20em;
 }
 
+div > a:focus article h1, div > a:hover article h1, div > a:focus article p, div > a:hover article p {
+    transform: translateY(-2rem);
+}
+
 div > a:focus, div > a:hover {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.5);
     outline: 0;
 }
-
 
 main > div article {
     background-color: #000;
@@ -612,19 +615,28 @@ main > div img {
 }
 
 div > a:focus img, div > a:hover img {
-    opacity: 0.7;
+    opacity: 0.4;
 }
 
 main > div article h1 {
     z-index: 20;
     position: absolute;
-    bottom: 2em;
+    bottom: 2rem;
+    transform: translateY(0);
+    transition: transform 200ms ease;
+}
+
+main > div article h1 {
+    margin: 1rem 0;
 }
 
 main > div article p {
     position: absolute;
-    bottom: 0;
+    top: 16rem;
     color: #FFF;
+    margin: 0;
+    transform: translateY(0);
+    transition: transform 200ms ease;
 }
 
 main > div article footer {
@@ -695,8 +707,8 @@ main + footer input:focus + label + div > label {
 main + footer div {
     transform: translateY(120%);
     position: absolute;
-    width: 18em;
-    right: 3em;
+    width: 18rem;
+    right: 3rem;
     bottom: 0;
     border-radius: 5px 5px 0 0;
     background-color: #FFF;
@@ -820,9 +832,43 @@ main > form input:valid {
     border: 1px solid var(--action-color);
 }
 
-main > form label, main > form input[type="email"], main > form input[type="password"], main > form  button, main > form a {
+main > form label, main > form input[type="email"], main > form input[type="password"], main > form  button, main > form > a {
     width: 100%;
     display: block;
+}
+
+
+form ol {
+    display: flex;
+}
+
+form h1 {
+    margin: 0;
+    padding-top: 0;
+    padding-left: 0;
+}
+
+form nav {
+    padding-bottom: 2em;
+}
+
+form ol li {
+    display: inline-block;
+    width: 33%;
+    line-height: 2em;
+    font-weight: bold;
+}
+
+form ol li:last-of-type {
+    opacity: 0.5;
+}
+
+form ol li a {
+    display: inline-block;
+    line-height: 2em;
+}
+form ol li:nth-child(2) a {
+    color: #4A90E2;
 }
 
 main > form input[type="checkbox"] {
@@ -864,7 +910,7 @@ input[type="email"], main > form input[type="password"] {
     margin: 0.2em 0 1em;
 }
 
-main > form a {
+main > form > a {
     padding: 1em 0;
 }
 
@@ -1035,6 +1081,10 @@ figure + input, figcaption input {
     100% {
         transform: rotate(359deg);
     }
+}
+
+progress {
+    width: 100%;
 }
 
 input:focus + label svg {
