@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,26 +10,27 @@
 <body>
 <header>
     <nav>
-        <h1>Hoofd navigatie</h1>
+        <h1>Hoofd Navigatie</h1>
         <label for="mobile-menu"><span></span></label>
         <input type="checkbox" id="mobile-menu">
         <ul>
-            <li><a href="index.html" lang="en" accesskey="h">Home</a></li>
-            <li><a href="" accesskey="o">Ontdekken</a></li>
-            <li><a href="" accesskey="f">Favorieten</a></li>
-            <li><a href="profile.html" accesskey="p">Profiel</a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Ontdekken</a></li>
+            <li><a href="#">Favorieten</a></li>
+            <li>
+                <a href="profile.html">Profiel</a>
                 <ul>
-                    <li><a href="/profile.html">Inloggen</a></li>
-                    <li><a href="/registeren.html">Registeren</a></li>
+                    <li><a href="profile.html">Inloggen</a></li>
+                    <li><a href="register.html">Registeren</a></li>
                 </ul>
             </li>
         </ul>
     </nav>
 </header>
 <main>
-    <h1>Inloggen</h1>
     <form action="index.html" method="get">
-
+        <fieldset>
+        <legend>Inloggen</legend>
         <label for="field-email">Email</label>
         <input type="email" id="field-email" name="field-email" autocomplete="email" required autofocus>
 
@@ -43,7 +44,7 @@
         <a href="#">Wachtwoord vergeten</a>
 
         <button type="submit">Inloggen</button>
-
+        </fieldset>
     </form>
 
 </main>

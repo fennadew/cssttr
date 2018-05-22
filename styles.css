@@ -29,7 +29,7 @@ body {
  * `article` contexts in Chrome, Firefox, and Safari.
  */
 
-h1 {
+h1, legend {
     font-size: 2em;
     margin: 0.67em 0;
 }
@@ -330,11 +330,16 @@ body {
     background-color: #F9F9F9;
 }
 
-h1 {
+h1, legend {
     font-family: var(--am-font-family);
     padding: var(--padding);
     font-size: var(--h1-size);
     font-weight: bold;
+}
+
+fieldset > a {
+    display: block;
+    padding: 1em 0;
 }
 
 ul li {
@@ -437,6 +442,30 @@ header li a:hover:after, header li a:focus:after {
     transform: scaleX(1);
 }
 
+form nav a {
+    position: relative;
+}
+form nav a:after {
+    content: "";
+    height: 0.15em;
+    width: 100%;
+    background: var(--action-color);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: scaleX(0);
+    transition: 0.3s;
+}
+
+form nav a:focus, form nav a:hover {
+    outline: 0;
+    color: var(--action-color);
+}
+
+form nav a:hover:after, form nav a:focus:after {
+    transform: scaleX(1);
+}
+
 header li:first-of-type {
     margin-right: auto;
 }
@@ -482,6 +511,7 @@ header input, header span {
 @media screen and (max-width: 30em) {
     header {
         padding: var(--padding) 0;
+        height: 3rem;
     }
 
     header input {
@@ -570,10 +600,16 @@ main > h1 {
     font-size: 3.3vw;
 }
 
+@media screen and (max-width: 60em) {
+    main > h1 {
+        font-size: 2.2rem;
+    }
+}
+
 main > div {
     display: grid;
     grid-template-columns: 32% 32% 32%;
-    grid-gap: 2%;
+    grid-gap: 2vw;
     height: 100%;
     grid-column-start: 2;
     grid-column-end: 3;
@@ -623,7 +659,7 @@ main > div article h1 {
     position: absolute;
     bottom: 2rem;
     transform: translateY(0);
-    transition: transform 200ms ease;
+    transition: transform 300ms ease;
 }
 
 main > div article h1 {
@@ -636,7 +672,7 @@ main > div article p {
     color: #FFF;
     margin: 0;
     transform: translateY(0);
-    transition: transform 200ms ease;
+    transition: transform 300ms ease;
 }
 
 main > div article footer {
@@ -771,41 +807,43 @@ main + footer textarea {
         grid-template-columns: 48% 48%;
         grid-gap: 4%;
     }
+    main {
+        margin-bottom: 11rem;
+    }
+}
+
+
+@media screen and (max-width: 37.500em) {
+    main {
+        margin-bottom: 18rem;
+    }
+
+    main > div {
+        grid-template-columns: 100%;
+        grid-gap: 2%;
+    }
+    main > h1 {
+        margin: 0 0 1rem;
+    }
 }
 
 @media screen and (max-width: 30em) {
     main {
-        grid-template-columns: 1em auto 1em;
+        grid-template-columns: 1rem auto 1rem;
     }
-
     main > div {
-        display: flex;
         grid-template-columns: 100%;
-        grid-gap: 0;
-        padding: 0.2em 0;
-        grid-column-start: 2;
-        grid-column-end: 3;
-        overflow-x: scroll;
+        grid-gap: 1rem;
+    }
+    main {
+        margin-bottom: 7rem;
+        padding-top: 3rem;
     }
 
-    main > div article:first-of-type {
-        margin-left: 10vw;
+    main > h1 {
+        font-size: 10vw;
     }
 
-    main > div article:last-of-type {
-        margin-right: 10vw;
-    }
-
-    main > div article {
-        height: 80vh;
-        min-width: 80vw;
-        margin-right: 2vw;
-    }
-
-
-    main > div article img {
-        height: 100%;
-    }
 }
 
 /*
@@ -842,7 +880,7 @@ form ol {
     display: flex;
 }
 
-form h1 {
+form h1, form legend {
     margin: 0;
     padding-top: 0;
     padding-left: 0;
@@ -985,7 +1023,7 @@ figcaption {
 
 article > section {
     background-color: #FFF;
-    margin: 15em 1em 3em;
+    margin: 13.5em 1% 3em;
     padding: 2em;
     border-radius: 5px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
