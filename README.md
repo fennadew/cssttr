@@ -7,8 +7,9 @@ Dit is een recepten website speciaal voor Marijn. Marijn is spastisch en kan daa
 * Geen classes gebruiken
 * Em gebruiken ipv pixels
 * Geen JavaScript
-* Moet werken met alleen maar tab
+* Moet werken met tabs en accessible zijn
 * Moet alle componenten er in hebben verwerkt
+* Maak het pleasurable
 
 ## Week 1
 * Concept bedenken + Design maken
