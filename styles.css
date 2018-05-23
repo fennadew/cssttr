@@ -770,12 +770,20 @@ main + footer ol {
 
 ol li {
     max-width: 30em;
+}
+
+section ol li {
     list-style-position: inside;
 }
 
 main + footer form {
     display: flex;
     flex-wrap: wrap;
+}
+
+figcaption footer legend {
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
 main + footer form label, main + footer form button {
@@ -1096,6 +1104,7 @@ figcaption input {
 
 figcaption fieldset div {
     display: flex;
+    margin-bottom: 1em;
 }
 
 figcaption input + label svg path {
