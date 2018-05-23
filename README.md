@@ -1,17 +1,22 @@
-# Voltooid
+# CSS to the rescue
 ![Screenshot](https://github.com/fennadew/cssttr/blob/master/images/screenshot.png)
 
 Dit is een recepten website speciaal voor Marijn. Marijn is spastisch en kan daarom alleen de tabs van zijn keyboard gebruiken ipv zijn muis. Ik heb de website zo ontworpen dat het makkelijk is om er door heen te tabben. Ook heb ik artikelen die we moesten lezen toegepast op de website
+
+## Github page
+[Link naar mijn GitHub Page](https://fennadew.github.io/cssttr)
 
 ## Regels
 * Geen classes gebruiken
 * Em gebruiken ipv pixels
 * Geen JavaScript
-* Moet werken met tabs en accessible zijn
+* Werkend met tabs
 * Moet alle componenten er in hebben verwerkt
-* Maak het pleasurable
+* Plesurable design
+* CSS grid gebruiken
 
-## Week 1
+## Voltooid
+### Week 1
 * Concept bedenken + Design maken
 * Rating, navigation, picture with subtitle en media item components gebruikt
 * CSS grid toegepast
@@ -26,8 +31,8 @@ Dit is een recepten website speciaal voor Marijn. Marijn is spastisch en kan daa
 * chat functie toevoegen
 
 
-# Voltooid
-## Week 2
+## Voltooid
+### Week 2
 * Focus styles toegevoegd
 * Design iets aangepast
 * Form validation toegevoegd + login gestijld
@@ -37,7 +42,7 @@ Dit is een recepten website speciaal voor Marijn. Marijn is spastisch en kan daa
 * custom checkbox gemaakt (login)
 * Transitions op :hovers en :focus gemaakt (login)
 
-# Planning voor volgende week
+## Planning voor volgende week
 * Step indictor toevoegen
 * Responsive maken
 * Accessibilty verbeteren
@@ -45,9 +50,15 @@ Dit is een recepten website speciaal voor Marijn. Marijn is spastisch en kan daa
 * rating focus verbeteren en dat het werkend is op tab
 * chat laten openen en sluiten
 
-
-# Github page
-[Link naar mijn GitHub Page](https://fennadew.github.io/cssttr)
+## Voltooid
+### Week 3
+* Step indictor toegevoegd
+* Responsive gemaakt
+* Accessibilty verbeterd
+* Meer pleasurable gemaakt
+* Recepten pagina aangepast
+* Rating aangepast
+* Chat werkend
 
 # Bronnen
 Rating example makes use of Emoji from: [Emojione](http://emojione.com)
