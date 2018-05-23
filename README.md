@@ -1,4 +1,6 @@
 # Voltooid
+![Screenshot](https://github.com/fennadew/cssttr/blob/master/images/screenshot.png)
+
 ## Week 1
 * Concept bedenken + Design maken
 * Rating, navigation, picture with subtitle en media item components gebruikt
