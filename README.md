@@ -1,5 +1,6 @@
 # Voltooid
 ![Screenshot](https://github.com/fennadew/cssttr/blob/master/images/screenshot.png)
+
 Dit is een recepten website speciaal voor Marijn. Marijn is spastisch en kan daarom alleen de tabs van zijn keyboard gebruiken ipv zijn muis. Ik heb de website zo ontworpen dat het makkelijk is om er door heen te tabben. Ook heb ik artikelen die we moesten lezen toegepast op de website
 
 ## Regels
