@@ -3,22 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Living Styleguide</title>
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title lang="en">Beste recepten</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header>
+<header role="banner">
     <nav>
-        <h1>Hoofdnavigatie</h1>
-        <label for="mobile-menu"><span></span></label>
+        <h1>Hoofd navigatie</h1>
         <input type="checkbox" id="mobile-menu">
+        <label for="mobile-menu"><span></span></label>
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#">Ontdekken</a></li>
-            <li><a href="#">Favorieten</a></li>
-            <li>
-                <a href="profile.html">Profiel</a>
+            <li><a href="index.html" lang="en" accesskey="h">Home</a></li>
+            <li><a href="" accesskey="o">Ontdekken</a></li>
+            <li><a href="" accesskey="f">Favorieten</a></li>
+            <li><a href="profile.html" accesskey="p">Profiel</a>
                 <ul>
                     <li><a href="profile.html">Inloggen</a></li>
                     <li><a href="register.html">Registeren</a></li>
@@ -40,7 +39,7 @@
                     <fieldset>
                         <legend>Rating</legend>
                         <div>
-                            <input type="radio" name="rating" id="rating-0" checked>
+                            <input type="radio" name="rating" id="rating-0">
                             <label for="rating-0">
                                 <svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -66,7 +65,7 @@
                             </label>
 
 
-                            <input type="radio" name="rating" id="rating-2">
+                            <input type="radio" name="rating" id="rating-2" checked>
                             <label for="rating-2">
                                 <svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1"
                                      xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">

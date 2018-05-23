@@ -600,12 +600,6 @@ main > h1 {
     font-size: 3.3vw;
 }
 
-@media screen and (max-width: 60em) {
-    main > h1 {
-        font-size: 2.2rem;
-    }
-}
-
 main > div {
     display: grid;
     grid-template-columns: 32% 32% 32%;
@@ -776,6 +770,7 @@ main + footer ol {
 
 ol li {
     max-width: 30em;
+    list-style-position: inside;
 }
 
 main + footer form {
@@ -800,50 +795,6 @@ main + footer textarea {
     margin: 0.2em 0 1em;
     background-color: #FFF;
     resize: none;
-}
-
-@media screen and (max-width: 60em) {
-    main > div {
-        grid-template-columns: 48% 48%;
-        grid-gap: 4%;
-    }
-    main {
-        margin-bottom: 11rem;
-    }
-}
-
-
-@media screen and (max-width: 37.500em) {
-    main {
-        margin-bottom: 18rem;
-    }
-
-    main > div {
-        grid-template-columns: 100%;
-        grid-gap: 2%;
-    }
-    main > h1 {
-        margin: 0 0 1rem;
-    }
-}
-
-@media screen and (max-width: 30em) {
-    main {
-        grid-template-columns: 1rem auto 1rem;
-    }
-    main > div {
-        grid-template-columns: 100%;
-        grid-gap: 1rem;
-    }
-    main {
-        margin-bottom: 7rem;
-        padding-top: 3rem;
-    }
-
-    main > h1 {
-        font-size: 10vw;
-    }
-
 }
 
 /*
@@ -991,6 +942,7 @@ main > article {
     justify-content: center;
     flex-wrap: wrap;
     align-items: flex-start;
+    position: relative
 }
 
 
@@ -1042,7 +994,7 @@ main > article h1 {
     z-index: 1;
     left: 0;
     right: 0;
-    top: 33vh;
+    top: 25vh;
     transform: translateY(-50%);
     margin: auto;
     font-size: 3.3vw;
@@ -1106,6 +1058,14 @@ figure {
     width: 100%;
 }
 
+@media screen and (max-width: 42.500em) {
+    figure {
+        height: 40vh;
+    }
+    main > article h1 {
+        top: 20vh;
+    }
+}
 
 figure + input, figcaption input {
     opacity: 0;
@@ -1155,4 +1115,127 @@ figcaption label:hover svg path
 figcaption input:checked + label + input  + label svg path, figcaption input:checked + label + input  +  label + input + label svg path,
 figcaption input:checked + label + input  + label + input  +  label + input + label svg path {
     fill: grey;
+}
+
+
+@media screen and (max-width: 60em) {
+    main > div {
+        grid-template-columns: 48% 48%;
+        grid-gap: 4%;
+    }
+    main {
+        margin-bottom: 11rem;
+    }
+}
+
+@media screen and (max-width: 60em) {
+    main > h1 {
+        font-size: 2.2rem;
+    }
+    main > article > h1 {
+        font-size: 2.2rem;
+    }
+
+    article > section:first-of-type, article > section:last-of-type {
+        width: 60%;
+    }
+
+    article > section:last-of-type {
+        margin-top: 0;
+    }
+
+}
+
+
+@media screen and (max-width: 37.500em) {
+    main {
+        margin-bottom: 18rem;
+    }
+
+    main > div {
+        grid-template-columns: 100%;
+        grid-gap: 2%;
+    }
+    main > h1 {
+        margin: 0 0 1rem;
+    }
+    figure {
+        height: 30vh;
+    }
+    figcaption {
+        bottom: -250px;
+    }
+    article > section {
+        margin: 18.5em 1% 3em;
+    }
+    main > article h1 {
+        font-size: 1.9rem;
+        top: 15vh;
+    }
+    main > article figure img {
+        clip: rect(10vh, 100vw, 40vh, 0);
+    }
+
+}
+
+@media screen and (max-width: 30em) {
+    main {
+        grid-template-columns: 1rem auto 1rem;
+    }
+    main > div {
+        grid-template-columns: 100%;
+        grid-gap: 1rem;
+    }
+    main {
+        margin-bottom: 7rem;
+        padding-top: 3rem;
+    }
+
+    main > article {
+        display: block;
+    }
+
+    figcaption, article > section:first-of-type, article > section:last-of-type {
+        width: auto;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    article > section {
+        margin: 16.5em 1% 1rem;
+    }
+
+    main > h1 {
+        font-size: 10vw;
+    }
+
+    header input {
+        display: block;
+    }
+
+    nav > h1 ~ input:focus + label > span {
+        background-color: var(--action-color);
+    }
+    nav > h1 ~ input:focus + label > span:before {
+        background-color: var(--action-color);
+    }
+    nav > h1 ~ input:focus + label > span:after {
+        background-color: var(--action-color);
+    }
+
+    nav > h1 ~ input:checked + label > span,
+    nav > h1 ~ input:checked + label > span:before,
+    nav > h1 ~ input:checked + label > span:after {
+        background-color: var(--action-color);
+    }
+
+    header nav > ul {
+        display: block;
+    }
+
+    header ul ul {
+        padding-top: 0;
+        right: 0;
+    }
+
 }
